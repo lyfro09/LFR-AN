@@ -7,9 +7,6 @@ from pathlib import Path
 from collections import defaultdict, deque
 
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 TOKEN = os.getenv("ANTI_TOKEN")
 
