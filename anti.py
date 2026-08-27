@@ -445,6 +445,12 @@ async def restore_from_snapshot(guild):
 async def on_ready():
     global last_known_guild_name
 
+    activity = discord.Activity(
+        type=discord.ActivityType.watching,
+        name="LFR Community",
+    )
+    await bot.change_presence(activity=activity)
+
     load_snapshot()
 
     guild = bot.get_guild(PROTECTED_GUILD_ID)
